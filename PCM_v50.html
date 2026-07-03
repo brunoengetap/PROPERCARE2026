@@ -1,11 +1,13 @@
-// PCM_v50.html
-// v50 — Resiliência de rede: retry/backoff em gsGet e syncToGS
-//   - Nova função interna _gsRequestComRetry_: até 2 retries (600ms/1200ms)
-//     para falhas de infraestrutura do GAS. Cobre indiretamente toda
-//     chamada que passa por gsGet/syncToGS/gsPost, inclusive
-//     instanciarPipeline (criação de OS e "Trocar pipeline") e a
-//     sincronização silenciosa de boot (syncFromGS).
-//   - gsGet/syncToGS: assinatura e comportamento de sucesso inalterados.
+<!--
+PCM_v50.html
+v50 — Resiliência de rede: retry/backoff em gsGet e syncToGS
+  - Nova função interna _gsRequestComRetry_: até 2 retries (600ms/1200ms)
+    para falhas de infraestrutura do GAS. Cobre indiretamente toda
+    chamada que passa por gsGet/syncToGS/gsPost, inclusive
+    instanciarPipeline (criação de OS e "Trocar pipeline") e a
+    sincronização silenciosa de boot (syncFromGS).
+  - gsGet/syncToGS: assinatura e comportamento de sucesso inalterados.
+-->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
